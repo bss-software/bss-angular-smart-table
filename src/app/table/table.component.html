@@ -1,15 +1,15 @@
 <table class="table">
     <thead>
-        <tr *ngFor="let meta in tableMetadata">
-            <th scope="col">
-                <input class="form-control" />
-                <span *ngIf="meta.visible">{{meta.Title}}</span>
+        <tr>
+            <th *ngFor="let meta of tableMetadata.columns">
+                <input *ngIf="meta.visible" class="form-control" />
+                <span *ngIf="meta.visible">{{meta.title}}</span>
             </th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let elementData of data">
-            <td *ngFor="let meta of tableMetadata">
+            <td *ngFor="let meta of tableMetadata.columns">
                 <span *ngIf="meta.visible">{{elementData[meta.path]}}</span>
             </td>
         </tr>

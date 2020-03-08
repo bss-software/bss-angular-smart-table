@@ -17,7 +17,8 @@ export class AppComponent {
       visible: true
     }, {
       path: "lastName",
-      title: "Last Name"
+      title: "Last Name",
+      visible: true
     }]
   };
   public data = [{
