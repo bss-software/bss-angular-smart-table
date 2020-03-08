@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TableMetadata } from './table/model/table-metadata';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bss-angular-smart-table';
+  public tableMetadata: TableMetadata = {
+    filtrable: true,
+    sortable: true,
+    columns: [{
+      path: "firstName",
+      title: "First Name",
+      visible: true
+    }, {
+      path: "lastName",
+      title: "Last Name"
+    }]
+  };
+  public data = [{
+    firstName: "Alin",
+    lastName: "Bizau"
+  }, {
+    firstName: "Cristina",
+    lastName: "Sabau"
+  }];
 }
